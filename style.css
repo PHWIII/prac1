@@ -87,71 +87,106 @@ body {
     font-size: 12px;
 }
 
-/* ========== СЕКЦИЯ 2: ДВЕ КОЛОНКИ ========== */
-.blog__wrapper {
+/* ========== НИЖНЯЯ СЕКЦИЯ ========== */
+.cards-two {
     display: flex;
     gap: 40px;
+    margin-top: 50px;
 }
 
-/* Левая колонка - широкая */
-.blog__col--wide {
-    flex: 2; /* Занимает в 2 раза больше места */
+.column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* Расстояние между блоками */
 }
 
-.blog__decor {
-    width: 50px;
-    height: 25px;
-    margin-bottom: 10px;
+/* Левая колонка шире правой */
+.column--left {
+    flex: 2;
 }
 
-/* Левая колонка: горизонтальные карточки */
-.post-row {
+.column--right {
+    flex: 1;
+}
+
+/* Обертка для каждого блока (полосы + карточка) */
+.block-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ от полос до карточки */
+}
+
+/* Черные полосы */
+.block-wrap__lines {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.black-line {
+    background-color: #000;
+    height: 15px;
+}
+
+.black-line--short {
+    width: 40%;
+}
+
+.black-line--long {
+    width: 60%;
+}
+
+/* Карточка с рамкой */
+.card-horizontal--boxed,
+.card-vertical--boxed {
+    border: 2px solid #e74c3c; /* Красная рамка */
+    padding: 15px;
     display: flex;
     gap: 15px;
     align-items: flex-start;
 }
 
-.post-row__img {
-    width: 90px;
-    height: 90px;
-    flex-shrink: 0; /* Запрещаем сжимать картинку */
+/* Чередование: Текст слева, картинка справа */
+.card-horizontal--reverse {
+    flex-direction: row-reverse;
+}
+/* Картинки в горизонтальных карточках */
+.card-horizontal__img {
+    width: 100px;
+    height: 100px;
+    background-color: #2b2b2b;
+    flex-shrink: 0;
 }
 
-.post-row__content {
+.card-horizontal__content {
     flex: 1;
 }
 
-.post-row__title {
+.card-horizontal__title {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.post-row__text {
+.card-horizontal__text {
     font-size: 12px;
+    line-height: 1.4;
 }
 
-/* Правая колонка - узкая (с красной рамкой) */
-.blog__col--narrow {
-    flex: 1; /* Занимает в 2 раза меньше места */
+/* Вертикальные карточки (правая колонка) */
+.card-vertical {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-    border: 2px solid #e74c3c; /* Красная рамка для правой колонки */
 }
 
-/* Правая колонка: вертикальные карточки */
-.post-col__title {
+.card-vertical__title {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.post-col__text {
-    font-size: 11px;
-    word-wrap: break-word; /* Чтобы слова не вылезали за рамку */
+.card-vertical__text {
+    font-size: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
 }
