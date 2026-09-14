@@ -1,192 +1,300 @@
-/* ========== СБРОС СТИЛЕЙ ========== */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.4;
-    color: #000;
-    background-color: #fff;
-    padding: 20px 0;
+    background: #fff;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 15px;
+.page {
+    width: 86%;
+    max-width: 830px;
+    margin: 55px auto;
 }
 
-/* Цвет для всех черных квадратов (заглушек) */
-.header__box, .feature__img, .post-row__img, .blog__decor {
-    background-color: #2b2b2b;
+
+/* =========================
+   ВЕРХНЯЯ ЧАСТЬ
+   ========================= */
+
+.top {
+    position: relative;
+    height: 205px;
 }
 
-/* ========== ШАПКА ========== */
-.header {
-    margin-bottom: 40px;
+.top-line {
+    position: absolute;
+    height: 52px;
+    background: #000;
 }
 
-.header__row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.top-line-left {
+    left: 4px;
+    top: 0;
+    width: 340px;
 }
 
-.header__box--left {
-    width: 45%;
-    height: 40px;
+.top-line-right {
+    right: 8px;
+    top: 0;
+    width: 165px;
 }
 
-.header__box--right {
-    width: 20%;
-    height: 40px;
+.top-line-wide {
+    left: 0;
+    right: 0;
+    top: 130px;
+    height: 63px;
 }
 
-.header__box--full {
-    width: 100%;
-    height: 50px;
+
+/* =========================
+   ТРИ КАРТОЧКИ
+   ========================= */
+
+.cards {
+    border: 4px solid #d93636;
+    padding: 12px 12px 17px;
 }
 
-/* ========== СЕКЦИЯ 1: ТРИ КАРТОЧКИ ========== */
-.features {
-    margin-bottom: 50px;
+.cards-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-/* Красная рамка вокруг первой секции */
-.features__wrapper {
-    display: flex;
-    gap: 25px;
-    padding: 20px;
-    border: 2px solid #e74c3c; 
-}
-
-.feature {
-    flex: 1; /* Растягиваем на равные части */
-    display: flex;
-    flex-direction: column;
-}
-
-.feature__img {
-    width: 100%;
-    height: 130px; /* Фиксированная высота, чтобы не сжимались */
-    margin-bottom: 15px;
-}
-
-.feature__title {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 8px;
+.card {
+    min-width: 0;
     text-align: center;
 }
 
-.feature__text {
+.image {
+    width: 145px;
+    height: 145px;
+    background: #000;
+    margin: 0 auto 18px;
+}
+
+.card h2 {
+    margin: 0 0 17px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.card p {
+    margin: 0;
     font-size: 12px;
+    line-height: 1.55;
+    text-align: left;
 }
 
-/* ========== НИЖНЯЯ СЕКЦИЯ ========== */
-.cards-two {
-    display: flex;
-    gap: 40px;
-    margin-top: 50px;
+
+/* =========================
+   НИЖНЯЯ ЧАСТЬ
+   ========================= */
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 105px;
+    margin-top: 94px;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Расстояние между блоками */
+.bottom-column {
+    min-width: 0;
 }
 
-/* Левая колонка шире правой */
-.column--left {
-    flex: 2;
+
+/* Чёрные заголовочные блоки */
+
+.heading {
+    background: #000;
+    height: 35px;
+    margin-bottom: 31px;
 }
 
-.column--right {
-    flex: 1;
+.heading.short {
+    width: 225px;
 }
 
-/* Обертка для каждого блока (полосы + карточка) */
-.block-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Отступ от полос до карточки */
+.heading.long {
+    width: 380px;
+    height: 64px;
+    margin-bottom: 35px;
 }
 
-/* Черные полосы */
-.block-wrap__lines {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.heading.right {
+    margin-left: auto;
 }
 
-.black-line {
-    background-color: #000;
-    height: 15px;
+
+/* =========================
+   ЛЕВЫЙ БЛОК
+   ========================= */
+
+.list-box {
+    border: 4px solid #d93636;
+    padding: 7px 8px 12px;
 }
 
-.black-line--short {
-    width: 40%;
+.list-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    align-items: start;
+
+    min-height: 126px;
+    padding: 0 0 13px;
 }
 
-.black-line--long {
-    width: 60%;
+.list-item + .list-item {
+    padding-top: 12px;
 }
 
-/* Карточка с рамкой */
-.card-horizontal--boxed,
-.card-vertical--boxed {
-    border: 2px solid #e74c3c; /* Красная рамка */
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
+
+/* Средняя картинка справа */
+
+.list-item-reverse {
+    grid-template-columns: 1fr 100px;
 }
 
-/* Чередование: Текст слева, картинка справа */
-.card-horizontal--reverse {
-    flex-direction: row-reverse;
-}
-/* Картинки в горизонтальных карточках */
-.card-horizontal__img {
-    width: 100px;
-    height: 100px;
-    background-color: #2b2b2b;
-    flex-shrink: 0;
+.list-item-reverse .small-image {
+    order: 2;
 }
 
-.card-horizontal__content {
-    flex: 1;
+.list-item-reverse .item-text {
+    order: 1;
 }
 
-.card-horizontal__title {
+
+/* Маленькие чёрные квадраты */
+
+.small-image {
+    width: 96px;
+    height: 96px;
+    background: #000;
+}
+
+
+/* Текст */
+
+.item-text h2 {
+    margin-top: 4px;
+    margin-bottom: 17px;
+
     font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    line-height: 1;
 }
 
-.card-horizontal__text {
-    font-size: 12px;
-    line-height: 1.4;
+.item-text p {
+    font-size: 9px;
+    line-height: 1.55;
 }
 
-/* Вертикальные карточки (правая колонка) */
-.card-vertical {
-    display: flex;
-    flex-direction: column;
+
+/* =========================
+   ПРАВЫЙ БЛОК
+   ========================= */
+
+.text-box {
+    border: 4px solid #d93636;
+    padding: 5px 8px 12px;
 }
 
-.card-vertical__title {
+.text-box article {
+    padding-bottom: 24px;
+}
+
+.text-box article + article {
+    padding-top: 4px;
+}
+
+.text-box h2 {
+    margin: 0 0 19px;
+
     font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    line-height: 1;
 }
 
-.card-vertical__text {
-    font-size: 12px;
-    line-height: 1.4;
-    word-wrap: break-word;
+.text-box p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   АДАПТИВ
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .page {
+        width: 92%;
+    }
+
+    .bottom {
+        gap: 35px;
+    }
+
+    .heading.long {
+        width: 100%;
+    }
+
+    .cards-3 {
+        gap: 15px;
+    }
+
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .top {
+        height: 170px;
+    }
+
+    .top-line-left {
+        width: 45%;
+    }
+
+    .top-line-right {
+        width: 25%;
+    }
+
+    .top-line-wide {
+        top: 110px;
+        height: 50px;
+    }
+
+    .cards-3,
+    .bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom {
+        margin-top: 55px;
+    }
+
+    .cards-3 {
+        gap: 40px;
+    }
+
+    .card p {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .bottom-left,
+    .bottom-right {
+        width: 100%;
+    }
 }
