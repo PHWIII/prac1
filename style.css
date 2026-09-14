@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    width: 860px;
+    width: 855px;
     margin: 55px auto 60px;
 }
 
@@ -107,11 +107,8 @@ body {
 
 .bottom {
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 105px;
-
+    grid-template-columns: 410px 335px;
+    column-gap: 110px;
     margin-top: 95px;
 }
 
@@ -131,21 +128,22 @@ body {
 .title-small {
     width: 225px;
     height: 36px;
-
     margin-bottom: 34px;
 }
 
 .title-large {
     width: 380px;
     height: 64px;
-
     margin-bottom: 35px;
 }
 
-.right {
-    margin-left: auto;
+.right-column .title-small {
+    width: 273px;
 }
 
+.right-column .title-large {
+    width: 310px;
+}
 
 /* =========================
    КРАСНЫЕ БЛОКИ
@@ -161,9 +159,8 @@ body {
    ========================= */
 
 .left-box {
+    width: 410px;
     height: 400px;
-
-    padding: 7px 7px 10px;
 }
 
 .row {
@@ -215,11 +212,9 @@ body {
    ========================= */
 
 .right-box {
+    width: 335px;
     height: 425px;
-
-    padding: 7px 8px;
 }
-
 .text-item {
     margin-bottom: 25px;
 }
