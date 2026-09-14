@@ -3,15 +3,15 @@
 }
 
 body {
-    background: #fff;
-    color: #111;
+    margin: 0;
+    background: white;
+    color: black;
     font-family: Georgia, "Times New Roman", serif;
 }
 
-.page {
-    width: 86%;
-    max-width: 830px;
-    margin: 55px auto;
+.container {
+    width: 860px;
+    margin: 55px auto 60px;
 }
 
 
@@ -21,32 +21,34 @@ body {
 
 .top {
     position: relative;
-    height: 205px;
+    width: 100%;
+    height: 236px;
 }
 
-.top-line {
+.top-small {
     position: absolute;
+    top: 0;
     height: 52px;
     background: #000;
 }
 
-.top-line-left {
-    left: 4px;
-    top: 0;
-    width: 340px;
+.top-left {
+    left: 5px;
+    width: 338px;
 }
 
-.top-line-right {
+.top-right {
     right: 8px;
-    top: 0;
-    width: 165px;
+    width: 166px;
 }
 
-.top-line-wide {
+.top-big {
+    position: absolute;
     left: 0;
-    right: 0;
     top: 130px;
+    width: 100%;
     height: 63px;
+    background: #000;
 }
 
 
@@ -54,40 +56,47 @@ body {
    ТРИ КАРТОЧКИ
    ========================= */
 
-.cards {
-    border: 4px solid #d93636;
-    padding: 12px 12px 17px;
-}
+.three-cards {
+    width: 100%;
+    height: 338px;
 
-.cards-3 {
+    border: 4px solid #d82f35;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+
+    padding: 10px 12px 15px;
+    gap: 32px;
 }
 
 .card {
-    min-width: 0;
     text-align: center;
 }
 
-.image {
-    width: 145px;
-    height: 145px;
+.square {
+    width: 143px;
+    height: 143px;
+
     background: #000;
-    margin: 0 auto 18px;
+
+    margin: 0 auto 19px;
 }
 
 .card h2 {
-    margin: 0 0 17px;
+    margin: 0 0 18px;
+
     font-size: 16px;
     line-height: 1;
-    font-weight: 700;
+
+    font-weight: bold;
 }
 
 .card p {
     margin: 0;
-    font-size: 12px;
+
+    font-size: 11px;
     line-height: 1.55;
+
     text-align: left;
 }
 
@@ -98,36 +107,52 @@ body {
 
 .bottom {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 105px;
-    margin-top: 94px;
+
+    column-gap: 105px;
+
+    margin-top: 95px;
 }
 
-.bottom-column {
-    min-width: 0;
+.column {
+    width: 100%;
 }
 
 
-/* Чёрные заголовочные блоки */
+/* =========================
+   ЧЁРНЫЕ ЗАГОЛОВКИ
+   ========================= */
 
-.heading {
+.black-title {
     background: #000;
-    height: 35px;
-    margin-bottom: 31px;
 }
 
-.heading.short {
+.title-small {
     width: 225px;
+    height: 36px;
+
+    margin-bottom: 34px;
 }
 
-.heading.long {
+.title-large {
     width: 380px;
     height: 64px;
+
     margin-bottom: 35px;
 }
 
-.heading.right {
+.right {
     margin-left: auto;
+}
+
+
+/* =========================
+   КРАСНЫЕ БЛОКИ
+   ========================= */
+
+.red-box {
+    border: 4px solid #d82f35;
 }
 
 
@@ -135,63 +160,53 @@ body {
    ЛЕВЫЙ БЛОК
    ========================= */
 
-.list-box {
-    border: 4px solid #d93636;
-    padding: 7px 8px 12px;
+.left-box {
+    height: 400px;
+
+    padding: 7px 7px 10px;
 }
 
-.list-item {
+.row {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 24px;
-    align-items: start;
 
-    min-height: 126px;
-    padding: 0 0 13px;
+    grid-template-columns: 96px 1fr;
+
+    column-gap: 23px;
+
+    min-height: 125px;
 }
 
-.list-item + .list-item {
-    padding-top: 12px;
+.row-middle {
+    grid-template-columns: 1fr 96px;
 }
 
-
-/* Средняя картинка справа */
-
-.list-item-reverse {
-    grid-template-columns: 1fr 100px;
-}
-
-.list-item-reverse .small-image {
-    order: 2;
-}
-
-.list-item-reverse .item-text {
-    order: 1;
-}
-
-
-/* Маленькие чёрные квадраты */
-
-.small-image {
+.small-square {
     width: 96px;
     height: 96px;
+
     background: #000;
 }
 
-
-/* Текст */
-
-.item-text h2 {
-    margin-top: 4px;
-    margin-bottom: 17px;
-
-    font-size: 14px;
-    line-height: 1;
+.row-text {
+    padding-top: 2px;
 }
 
-.item-text p {
-    font-size: 9px;
+.row-text h3 {
+    margin: 0 0 17px;
+
+    font-size: 13px;
+    line-height: 1;
+
+    font-weight: bold;
+}
+
+.row-text p {
+    margin: 0;
+
+    font-size: 8.5px;
     line-height: 1.55;
+
+    text-align: left;
 }
 
 
@@ -199,102 +214,100 @@ body {
    ПРАВЫЙ БЛОК
    ========================= */
 
-.text-box {
-    border: 4px solid #d93636;
-    padding: 5px 8px 12px;
+.right-box {
+    height: 425px;
+
+    padding: 7px 8px;
 }
 
-.text-box article {
-    padding-bottom: 24px;
+.text-item {
+    margin-bottom: 25px;
 }
 
-.text-box article + article {
-    padding-top: 4px;
-}
-
-.text-box h2 {
+.text-item h3 {
     margin: 0 0 19px;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
+
+    font-weight: bold;
 }
 
-.text-box p {
+.text-item p {
     margin: 0;
 
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1.55;
+
+    text-align: left;
 }
 
 
 /* =========================
-   АДАПТИВ
+   АДАПТИВНОСТЬ
    ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-    .page {
-        width: 92%;
+    .container {
+        width: 90%;
     }
 
     .bottom {
-        gap: 35px;
+        column-gap: 40px;
     }
 
-    .heading.long {
-        width: 100%;
+    .title-large {
+        width: 90%;
     }
 
-    .cards-3 {
+    .three-cards {
         gap: 15px;
-    }
-
-    .image {
-        width: 120px;
-        height: 120px;
     }
 }
 
 
-@media (max-width: 620px) {
+@media (max-width: 650px) {
 
-    .top {
-        height: 170px;
+    .container {
+        width: 92%;
     }
 
-    .top-line-left {
+    .top {
+        height: 190px;
+    }
+
+    .top-left {
         width: 45%;
     }
 
-    .top-line-right {
+    .top-right {
         width: 25%;
     }
 
-    .top-line-wide {
+    .top-big {
         top: 110px;
-        height: 50px;
+        height: 55px;
     }
 
-    .cards-3,
+    .three-cards {
+        height: auto;
+
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+    }
+
     .bottom {
         grid-template-columns: 1fr;
+
+        row-gap: 60px;
+
+        margin-top: 60px;
     }
 
-    .bottom {
-        margin-top: 55px;
-    }
-
-    .cards-3 {
-        gap: 40px;
-    }
-
-    .card p {
-        max-width: 300px;
-        margin: auto;
-    }
-
-    .bottom-left,
-    .bottom-right {
-        width: 100%;
+    .right-box,
+    .left-box {
+        height: auto;
     }
 }
